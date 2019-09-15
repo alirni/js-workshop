@@ -1,8 +1,12 @@
 const minMax = (array) => {
   let min = array[0], max = array[0];
-  for (let i = 0; i <= array.length - 1; i++) {
-    min = array[i] < min ? array[i] : min;
-    max = array[i] > max ? array[i] : max;
+  for (let i = 1; i <= array.length - 1; i++) {
+    if (array[i] < min) {
+      min = array[i];
+    }
+    if (array[i] > max) {
+      max = array[i];
+    }
   }
   return {min, max}
 }
